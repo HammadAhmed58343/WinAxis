@@ -1,0 +1,15 @@
+{
+  "uuid": "winaxis@antigravity",
+  "name": "WinAxis",
+  "description": "Center active window (Ctrl+Alt+1) or resize to 80%x70% and center it (Ctrl+Alt+3)",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
+  ],
+  "url": "https://github.com/hammad-ahmed/WinAxis",
+  "settings-schema": "org.gnome.shell.extensions.winaxis"
+}

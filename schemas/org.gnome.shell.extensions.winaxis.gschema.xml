@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.winaxis" path="/org/gnome/shell/extensions/winaxis/">
+    <key name="shortcut-center" type="as">
+      <default><![CDATA[['<Control><Alt>1']]]></default>
+      <summary>Shortcut to center window without resizing</summary>
+    </key>
+    <key name="shortcut-resize-center" type="as">
+      <default><![CDATA[['<Control><Alt>3']]]></default>
+      <summary>Shortcut to resize window to 80%x70% and center it</summary>
+    </key>
+    <key name="resize-width" type="i">
+      <default>80</default>
+      <summary>Target width percentage</summary>
+      <description>Target width as a percentage of the work area width.</description>
+    </key>
+    <key name="resize-height" type="i">
+      <default>70</default>
+      <summary>Target height percentage</summary>
+      <description>Target height as a percentage of the work area height.</description>
+    </key>
+  </schema>
+</schemalist>
