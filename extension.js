@@ -7,6 +7,7 @@ import GLib from 'gi://GLib';
 export default class WindowCentererExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
+        this._timeoutId = null;
 
         // Register Ctrl+Alt+1 shortcut
         Main.wm.addKeybinding(
@@ -30,6 +31,12 @@ export default class WindowCentererExtension extends Extension {
     disable() {
         Main.wm.removeKeybinding('shortcut-center');
         Main.wm.removeKeybinding('shortcut-resize-center');
+
+        if (this._timeoutId) {
+            GLib.Source.remove(this._timeoutId);
+            this._timeoutId = null;
+        }
+
         this._settings = null;
     }
 
@@ -51,9 +58,15 @@ export default class WindowCentererExtension extends Extension {
                 console.log("[Window Centerer] Error unmaximizing window:", e);
             }
             
+            if (this._timeoutId) {
+                GLib.Source.remove(this._timeoutId);
+                this._timeoutId = null;
+            }
+
             // Defer moving and resizing to allow the window to unmaximize first
-            GLib.timeout_add(GLib.PRIORITY_DEFAULT, 100, () => {
+            this._timeoutId = GLib.timeout_add(GLib.PRIORITY_DEFAULT, 100, () => {
                 this._doCenterWindow(window, resize);
+                this._timeoutId = null;
                 return GLib.SOURCE_REMOVE;
             });
         } else {
