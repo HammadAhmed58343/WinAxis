@@ -12,7 +12,8 @@
   ],
   "url": "https://github.com/HammadAhmed58343/WinAxis",
   "donations": {
-    "github": "HammadAhmed58343"
+    "github": "HammadAhmed58343",
+    "patreon": "devdominion"
   },
   "settings-schema": "org.gnome.shell.extensions.winaxis"
 }
