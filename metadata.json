@@ -1,7 +1,7 @@
 {
   "uuid": "winaxis@antigravity",
   "name": "WinAxis",
-  "description": "Center active window (Ctrl+Alt+1) or resize to 80%x70% and center it (Ctrl+Alt+3)",
+  "description": "Center active window (Ctrl+Alt+1), move to center right (Ctrl+Alt+2), or resize to 80%x70% and center it (Ctrl+Alt+3)",
   "shell-version": [
     "45",
     "46",

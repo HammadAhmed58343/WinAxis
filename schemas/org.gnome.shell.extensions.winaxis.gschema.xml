@@ -5,6 +5,10 @@
       <default><![CDATA[['<Control><Alt>1']]]></default>
       <summary>Shortcut to center window without resizing</summary>
     </key>
+    <key name="shortcut-center-right" type="as">
+      <default><![CDATA[['<Control><Alt>2']]]></default>
+      <summary>Shortcut to move window to center right without resizing</summary>
+    </key>
     <key name="shortcut-resize-center" type="as">
       <default><![CDATA[['<Control><Alt>3']]]></default>
       <summary>Shortcut to resize window to 80%x70% and center it</summary>

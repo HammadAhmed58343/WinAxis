@@ -9,9 +9,11 @@ Developed for modern GNOME Shell versions (GNOME 45 through GNOME 50+), **WinAxi
 ## 🚀 Features
 
 *   **Quick Center (`<Ctrl>+<Alt>+1`):** Instantly centers the active window on your current monitor while preserving its existing dimensions.
+*   **Quick Center Right (`<Ctrl>+<Alt>+2`):** Moves the active window to the center-right of the screen while preserving its dimensions.
 *   **Scale & Center (`<Ctrl>+<Alt>+3`):** Resizes the active window to a configurable percentage of your screen area, then centers it.
-*   **Maximized Window Handling:** Smart transition logic that unmaximizes windows and applies positioning smoothly.
-*   **Preferences GUI:** Integrates directly with GNOME Extension Manager, allowing you to customize the target width and height percentages (from 10% to 100%).
+*   **Customizable Shortcuts:** Directly rebind any hotkey via the preferences GUI.
+*   **Maximized Window Handling:** Smart transition logic that unmaximizes or untiles windows and applies positioning smoothly.
+*   **Preferences GUI:** Integrates directly with GNOME Extension Manager, allowing you to customize shortcuts and adjust target width and height percentages (from 10% to 100%).
 *   **Clean ESM Architecture:** Built natively with modern GNOME GJS and ESM import specifications.
 
 ---
@@ -23,7 +25,7 @@ Developed for modern GNOME Shell versions (GNOME 45 through GNOME 50+), **WinAxi
 1. Clone or copy this repository to your local GNOME Shell extensions directory:
    ```bash
    mkdir -p ~/.local/share/gnome-shell/extensions
-   git clone https://github.com/hammad-ahmed/WinAxis.git ~/.local/share/gnome-shell/extensions/winaxis@antigravity
+   git clone https://github.com/HammadAhmed58343/WinAxis.git ~/.local/share/gnome-shell/extensions/winaxis@antigravity
    ```
 
 2. Compile the settings schema:
@@ -42,24 +44,20 @@ Developed for modern GNOME Shell versions (GNOME 45 through GNOME 50+), **WinAxi
 
 ## ⌨️ Keyboard Shortcuts
 
-| Shortcut | Action | Default |
+| Setting Key | Action | Default |
 | :--- | :--- | :---: |
 | `shortcut-center` | Center active window (keep size) | `<Ctrl>+<Alt>+1` |
+| `shortcut-center-right` | Move active window to center right (keep size) | `<Ctrl>+<Alt>+2` |
 | `shortcut-resize-center` | Resize window and center it | `<Ctrl>+<Alt>+3` |
 
 ---
 
 ## ⚙️ Configuration & Customization
 
-You can change the target proportions for the **Scale & Center** hotkey:
 1. Open the **Extension Manager** (or the default **Extensions** app).
-2. Find **WinAxis** and click the **Settings (Gear)** icon.
-3. Use the spinner controls to adjust the **Target Width (%)** and **Target Height (%)** to your preferred values.
-
-Alternatively, you can open the preferences window directly from your terminal:
-```bash
-gnome-extensions prefs winaxis@antigravity
-```
+2. Find **WinAxis** and click the **Settings (Gear)** icon (or run `gnome-extensions prefs winaxis@antigravity`).
+3. **Change Shortcuts:** Click any shortcut button and press your desired key combination. Press **Backspace/Delete** to disable a shortcut, or **Escape** to cancel.
+4. **Adjust Proportions:** Use the spinner controls to adjust the **Target Width (%)** and **Target Height (%)** for the Scale & Center action.
 
 ---
 
